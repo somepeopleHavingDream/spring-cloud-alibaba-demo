@@ -14,6 +14,8 @@ import org.yangxin.contentcenter.domain.entity.content.Share;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -31,10 +33,11 @@ public class ShareService {
         Integer userId = share.getUserId();
 
         List<ServiceInstance> instanceList = discoveryClient.getInstances("user-center");
-        String targetURL = instanceList.stream()
+        List<String> targetURLList = instanceList.stream()
                 .map(tmp -> tmp.getUri().toString() + "/users/{id}")
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("当前没有实例"));
+                .collect(Collectors.toList());
+        int i = ThreadLocalRandom.current().nextInt(0, targetURLList.size());
+        String targetURL = targetURLList.get(i);
         log.info("targetURL:{}", targetURL);
 
         UserDTO userDTO = this.restTemplate.getForObject(targetURL, UserDTO.class, userId);
