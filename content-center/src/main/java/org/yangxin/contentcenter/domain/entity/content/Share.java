@@ -1,14 +1,20 @@
 package org.yangxin.contentcenter.domain.entity.content;
 
-import java.util.Date;
-import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import lombok.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * 表名：share
  * 表注释：分享表
-*/
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -78,7 +84,7 @@ public class Share {
     private String downloadUrl;
 
     /**
-     * 下载数 
+     * 下载数
      */
     @Column(name = "buy_count")
     private Integer buyCount;
