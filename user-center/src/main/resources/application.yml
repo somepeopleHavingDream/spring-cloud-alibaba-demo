@@ -8,11 +8,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        # 指定 nacos server 的地址
         server-addr: localhost:8848
-        # 指定 namespace
 #        namespace: 769f8071-7ce0-40bf-a016-c50468cf49bc
-        # 指定集群名称
-#        cluster-name: NJ
+        metadata:
+          instance: c
+          haha: hehe
+          version: v1
+  #        cluster-name: NJ
   application:
     name: user-center
