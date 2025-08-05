@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "user-center.ribbon.NFLoadBalancerRuleClassName",
+      "type": "java.lang.String",
+      "description": "Description for user-center.ribbon.NFLoadBalancerRuleClassName."
+    }
+  ]
+}
