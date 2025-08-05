@@ -1,4 +1,4 @@
-package ribbonconfiguration;
+package org.yangxin.ribbonconfiguration;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
