@@ -14,6 +14,7 @@ spring:
           haha: hehe
           version: v1
         cluster-name: NJ
+  #        namespace: 769f8071-7ce0-40bf-a016-c50468cf49bc
   application:
     name: user-center
 server:
