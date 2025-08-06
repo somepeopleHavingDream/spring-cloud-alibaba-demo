@@ -13,8 +13,8 @@ spring:
           instance: c
           haha: hehe
           version: v1
-  #        cluster-name: NJ
+        cluster-name: NJ
   application:
     name: user-center
 server:
-  port: 8087
+  port: 8089
