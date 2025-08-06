@@ -15,4 +15,8 @@ server:
   port: 8010
 #user-center:
 #  ribbon:
+ribbon:
+  eager-load:
+    enabled: true
+    clients: user-center
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
