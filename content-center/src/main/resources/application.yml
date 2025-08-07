@@ -24,10 +24,11 @@ ribbon:
 logging:
   level:
     org.yangxin.contentcenter.feignclient.UserCenterFeignClient: debug
-#feign:
-#  client:
-#    config:
-#      # 想要调用的微服务的名称
-#      user-center:
-#        logger-level: full
+feign:
+  client:
+    config:
+      # 想要调用的微服务的名称
+      default:
+        #      user-center:
+        logger-level: full
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

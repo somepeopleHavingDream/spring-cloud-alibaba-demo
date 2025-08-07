@@ -6,12 +6,12 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-import org.yangxin.contentcenter.configuration.GlobalFeignConfiguration;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @MapperScan("org.yangxin.contentcenter.dao")
-@EnableFeignClients(defaultConfiguration = GlobalFeignConfiguration.class)
+@EnableFeignClients
+//@EnableFeignClients(defaultConfiguration = GlobalFeignConfiguration.class)
 public class ContentCenterApplication {
 
     public static void main(String[] args) {
