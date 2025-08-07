@@ -14,12 +14,16 @@ import org.yangxin.usercenter.service.user.UserService;
 @RequiredArgsConstructor
 @Slf4j
 public class UserController {
-
     private final UserService userService;
 
     @GetMapping("/{id}")
     public User findById(@PathVariable Integer id) {
         log.info("我被请求了");
         return this.userService.findById(id);
+    }
+
+    @GetMapping("/q")
+    public User query(User user) {
+        return user;
     }
 }
