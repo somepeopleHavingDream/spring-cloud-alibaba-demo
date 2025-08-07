@@ -21,4 +21,7 @@ ribbon:
   eager-load:
     enabled: true
     clients: user-center
+logging:
+  level:
+    org.yangxin.contentcenter.feignclient.UserCenterFeignClient: debug
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
