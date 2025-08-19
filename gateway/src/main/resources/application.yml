@@ -11,7 +11,12 @@ spring:
       discovery:
         locator:
           # 让 gateway 通过服务发现组件找到其他的微服务
-          enabled: true
+          enabled: false
+      routes:
+        - id: after_route
+          uri: lb://user-center
+          predicates:
+            - TimeBetween=上午9:00,下午5:00
 management:
   endpoints:
     web:
