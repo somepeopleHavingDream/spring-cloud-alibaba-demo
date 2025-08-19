@@ -19,12 +19,13 @@ public class TimeBetweenRoutePredicateFactory extends AbstractRoutePredicateFact
 
     @Override
     public Predicate<ServerWebExchange> apply(TimeBetweenConfig config) {
-        LocalTime start = config.getStart();
-        LocalTime end = config.getEnd();
+//        LocalTime start = config.getStart();
+//        LocalTime end = config.getEnd();
         return exchange -> {
             LocalTime now = LocalTime.now();
             log.info("apply {}", now);
-            return now.isAfter(start) && now.isBefore(end);
+            return true;
+//            return now.isAfter(start) && now.isBefore(end);
         };
     }
 
