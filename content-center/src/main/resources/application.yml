@@ -45,3 +45,6 @@ management:
     web:
       exposure:
         include: '*'
+jwt:
+  secret: j53YYrCeLMg7bp6Eqt26
+  expire-time-in-second: 1209600

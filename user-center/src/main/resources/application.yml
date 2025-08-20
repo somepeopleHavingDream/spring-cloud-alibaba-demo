@@ -19,3 +19,6 @@ spring:
     name: user-center
 server:
   port: 8089
+jwt:
+  secret: j53YYrCeLMg7bp6Eqt26
+  expire-time-in-second: 1209600
