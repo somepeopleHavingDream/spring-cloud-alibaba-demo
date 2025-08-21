@@ -4,6 +4,16 @@
       "name": "user-center.ribbon.NFLoadBalancerRuleClassName",
       "type": "java.lang.String",
       "description": "Description for user-center.ribbon.NFLoadBalancerRuleClassName."
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Description for jwt.secret."
+    },
+    {
+      "name": "jwt.expire-time-in-second",
+      "type": "java.lang.String",
+      "description": "Description for jwt.expire-time-in-second."
     }
   ]
 }
