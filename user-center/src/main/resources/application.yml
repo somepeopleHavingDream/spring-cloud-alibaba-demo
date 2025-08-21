@@ -17,6 +17,12 @@ spring:
   #        namespace: 769f8071-7ce0-40bf-a016-c50468cf49bc
   application:
     name: user-center
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      # 抽样率，默认是 0.1 (10%)
+      probability: 1.0
 server:
   port: 8089
 jwt:
