@@ -4,6 +4,7 @@ import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -57,5 +58,13 @@ public class TestController {
         rule.setLimitApp("default");
         ruleList.add(rule);
         FlowRuleManager.loadRules(ruleList);
+    }
+
+    @Value("${your.configuration}")
+    private String yourConfiguration;
+
+    @GetMapping("/test-config")
+    public String testConfiguration() {
+        return this.yourConfiguration;
     }
 }
